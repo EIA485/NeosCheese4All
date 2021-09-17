@@ -11,14 +11,14 @@ namespace Cheese4All
     {
         public override string Name => "Cheese4All";
         public override string Author => "eia485";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
         public override string Link => "https://github.com/EIA485/NeosCheese4All/";
         public override void OnEngineInit()
         {
             Harmony harmony = new Harmony("net.eia485.Cheese4All");
             harmony.PatchAll();
         }
-        [HarmonyPatch(typeof(PointerInteractionController), "OnCommonUpdate")]
+        [HarmonyPatch(typeof(PointerInteractionController), "BeforeInputUpdate")]
         class Cheese4AllPatch
         {
             public static void Prefix(ref bool ____cheeseActivated, ref UnlitMaterial ____pointerMaterial, PointerInteractionController __instance)
