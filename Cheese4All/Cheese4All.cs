@@ -11,7 +11,7 @@ namespace Cheese4All
     {
         public override string Name => "Cheese4All";
         public override string Author => "eia485";
-        public override string Version => "1.0.1";
+        public override string Version => "1.0.2";
         public override string Link => "https://github.com/EIA485/NeosCheese4All/";
         public override void OnEngineInit()
         {
@@ -23,7 +23,7 @@ namespace Cheese4All
         {
             public static void Prefix(ref bool ____cheeseActivated, ref UnlitMaterial ____pointerMaterial, PointerInteractionController __instance)
             {
-                if (__instance.World == Userspace.UserspaceWorld&&!____cheeseActivated);
+                if (__instance.World == Userspace.UserspaceWorld&&!____cheeseActivated)
                 {
                     ____cheeseActivated = true;
                     ____pointerMaterial.TintColor.Value = new color(1,1,1,1);
