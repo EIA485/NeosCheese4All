@@ -23,7 +23,7 @@ namespace Cheese4All
         {
             public static void Prefix(ref bool ____cheeseActivated, ref UnlitMaterial ____pointerMaterial, PointerInteractionController __instance)
             {
-                if (__instance.World == Userspace.UserspaceWorld&&!____cheeseActivated);
+                if (__instance.World == Userspace.UserspaceWorld&&!____cheeseActivated)
                 {
                     ____cheeseActivated = true;
                     ____pointerMaterial.TintColor.Value = new color(1,1,1,1);
